@@ -4,6 +4,7 @@
 const double pi = 3.141592653589793238;
 using namespace std;
 
+
 // 1) 
 void discriminant() {
     float A, B, C;
