@@ -2,171 +2,182 @@
 #include <math.h>
 
 const double pi = 3.141592653589793238;
-using namespace std;
-
 
 // 1) 
 void discriminant() {
     float A, B, C;
-    cout << "Enter first value: ";
-    cin >> A;
-    cout << "Enter second value: ";
-    cin >> B;
-    cout << "Enter third value: ";
-    cin >> C;
+    std::cout << "Enter first value: ";
+    std::cin >> A;
+    std::cout << "Enter second value: ";
+    std::cin >> B;
+    std::cout << "Enter third value: ";
+    std::cin >> C;
     float D = (B * B) - 4 * (A) * (C);
-    cout << endl << "D = " << D;
+    std::cout << std::endl << "D = " << D << std::endl;
+    system("pause");
 }
 // 2)
 void hypotenuse() {
     float X, Y;
-    cout << "Enter x: ";
-    cin >> X;
-    cout << "Enter y: ";
-    cin >> Y;
+    std::cout << "Enter x: ";
+    std::cin >> X;
+    std::cout << "Enter y: ";
+    std::cin >> Y;
     float hypotenuse = sqrt((X * X) + (Y * Y));
-    cout << endl << "The hypotenuse: " << hypotenuse;
+    std::cout << std::endl << "The hypotenuse: " << hypotenuse << std::endl;
+    system("pause");
 }
 // 3)
 void AreaOfCircle() {
-    float radius, result;
-    cout << "Enter the radius of the circle: ";
-    cin >> radius;
+    double radius, result;
+    std::cout << "Enter the radius of the circle: ";
+    std::cin >> radius;
     result = pi * (radius * radius);
-    cout << endl << "Radius: " << result;
+    std::cout << std::endl << "Radius: " << result << std::endl;
+    system("pause");
 }
 // 4)
 void Quadratic() {
     float a, b, c;
-    cout << "Enter A: " << endl;
-    cin >> a;
-    cout << "Enter B: " << endl;
-    cin >> b;
-    cout << "Enter C: " << endl;
-    cin >> c;
+    std::cout << "Enter A: ";
+    std::cin >> a;
+    std::cout << "Enter B: ";
+    std::cin >> b;
+    std::cout << "Enter C: ";
+    std::cin >> c;
     float secondRoot, firstRoot;
     float determinant = (b * b) - (4 * a * c);
     float squareroot = sqrt(determinant);
     if (determinant > 0) {
         firstRoot = (-b + squareroot) / (2 * a);
         secondRoot = (-b - squareroot) / (2 * a);
-        cout << "Roots are: " << firstRoot << " and " << secondRoot << endl;
+        std::cout << "Roots are: " << firstRoot << " and " << secondRoot << std::endl;
     }
-    else if (determinant == 0) {
-        cout << endl << "Root is: " << (-b + squareroot) / (2 * a);
+    else if (determinant <= 0) {
+        std::cout << std::endl << "Root is: " << (-b + squareroot) / (2 * a) << std::endl;
     }
+    system("pause");
 }
 // 5)
 void _2D_Distance() {
     float D, X1, X2, Y1, Y2;
-    cout << "Set the X2: ";
-    cin >> X2;
-    cout << "Set the X1 (if no number type 0): ";
-    cin >> X1;
-    cout << "Set the Y2: ";
-    cin >> Y2;
-    cout << "Set the Y1 (if no number type 0): ";
-    cin >> Y1;
+    std::cout << "Set the X2: ";
+    std::cin >> X2;
+    std::cout << "Set the X1 (if no number type 0): ";
+    std::cin >> X1;
+    std::cout << "Set the Y2: ";
+    std::cin >> Y2;
+    std::cout << "Set the Y1 (if no number type 0): ";
+    std::cin >> Y1;
     D = sqrt((X2 - X1) * (X2 - X1) + (Y2 - Y1) * (Y2 - Y1));
-    cout << endl << "Result: " << D;
+    std::cout << std::endl << "Result: " << D << std::endl;
+    system("pause");
 }
 // 6)
 void _3D_Distance() {
     float D, x2, x1, y2, y1, z2, z1;
-    cout << "Set the X2: ";
-    cin >> x2;
-    cout << "Set the X1: ";
-    cin >> x1;
-    cout << "Set the Y2: ";
-    cin >> y2;
-    cout << "Set the Y1: ";
-    cin >> y1;
-    cout << "Set the Z2: ";
-    cin >> z2;
-    cout << "Set the Z1: ";
-    cin >> z1;
+    std::cout << "Set the X2: ";
+    std::cin >> x2;
+    std::cout << "Set the X1: ";
+    std::cin >> x1;
+    std::cout << "Set the Y2: ";
+    std::cin >> y2;
+    std::cout << "Set the Y1: ";
+    std::cin >> y1;
+    std::cout << "Set the Z2: ";
+    std::cin >> z2;
+    std::cout << "Set the Z1: ";
+    std::cin >> z1;
     D = sqrt((x2 - x1) + (y2 - y1) + (z2 - z1));
-    cout << endl << "D = " << D;
+    std::cout << std::endl << "D = " << D << std::endl;
+    system("pause");
 }
 // 7)
 void Midpoint() {
     float x1, x2, y1, y2, First, Second;
-    cout << "Type x1: ";
-    cin >> x1;
-    cout << "Type x2: ";
-    cin >> x2;
-    cout << "Type y1: ";
-    cin >> y1;
-    cout << "Type y2: ";
-    cin >> y2;
+    std::cout << "Type x1: ";
+    std::cin >> x1;
+    std::cout << "Type x2: ";
+    std::cin >> x2;
+    std::cout << "Type y1: ";
+    std::cin >> y1;
+    std::cout << "Type y2: ";
+    std::cin >> y2;
     First = (x1 + x2) / 2;
     Second = (y1 + y2) / 2;
-    cout << endl << "(" << First << "," << Second << ")";
+    std::cout << std::endl << "(" << First << "," << Second << ")" << std::endl;
+    system("pause");
 }
 // 8)
 void Sine() {
     float opposite, hypotenuse, sine;
-    cout << "Enter the 'opposite': ";
-    cin >> opposite;
-    cout << "Enter the 'hypotenuse': ";
-    cin >> hypotenuse;
+    std::cout << "Enter the 'opposite': ";
+    std::cin >> opposite;
+    std::cout << "Enter the 'hypotenuse': ";
+    std::cin >> hypotenuse;
     sine = opposite / hypotenuse;
-    cout << endl << "Result: " << sine;
+    std::cout << std::endl << "Result: " << sine << std::endl;
+    system("pause");
 }
 // 9)
 void Cosine() {
     float hypotenuse, adjacent, cosine;
-    cout << "Enter the 'adjacent': ";
-    cin >> adjacent;
-    cout << "Enter the 'hypotenuse': ";
-    cin >> hypotenuse;
+    std::cout << "Enter the 'adjacent': ";
+    std::cin >> adjacent;
+    std::cout << "Enter the 'hypotenuse': ";
+    std::cin >> hypotenuse;
     cosine = adjacent / hypotenuse;
-    cout << endl << "Result: " << cosine;
+    std::cout << std::endl << "Result: " << cosine << std::endl;
+    system("pause");
 }
 // 10)
 void Tangent() {
     float opposite, adjacent, tangent;
-    cout << "Enter the 'opposite': ";
-    cin >> opposite;
-    cout << "Enter the 'adjacent': ";
-    cin >> adjacent;
+    std::cout << "Enter the 'opposite': ";
+    std::cin >> opposite;
+    std::cout << "Enter the 'adjacent': ";
+    std::cin >> adjacent;
     tangent = opposite / adjacent;
-    cout << endl << "Result: " << tangent;
+    std::cout << std::endl << "Result: " << tangent << std::endl;
+    system("pause");
 }
 // 11)
 void Slope() {
     float y2, y1, x2, x1, slope;
-    cout << "Coordinate y2: ";
-    cin >> y2;
-    cout << "Coordinate y1: ";
-    cin >> y1;
-    cout << "Coordinate x2: ";
-    cin >> x2;
-    cout << "Coordinate x1: ";
-    cin >> x1;
+    std::cout << "Coordinate y2: ";
+    std::cin >> y2;
+    std::cout << "Coordinate y1: ";
+    std::cin >> y1;
+    std::cout << "Coordinate x2: ";
+    std::cin >> x2;
+    std::cout << "Coordinate x1: ";
+    std::cin >> x1;
     slope = (y2 - y1) / (x2 - x1);
-    cout << endl << "Slope: " << slope;
+    std::cout << std::endl << "Slope: " << slope << std::endl;
+    system("pause");
 }
 // 12)
 void CircumferenceOfCircle() {
-    float radius, circumference;
-    cout << "Enter the radius: ";
-    cin >> radius;
+    double radius, circumference;
+    std::cout << "Enter the radius: ";
+    std::cin >> radius;
     circumference = 2 * pi * radius;
-    cout << "circumference -> " << circumference;
+    std::cout << "circumference -> " << circumference << std::endl;
+    system("pause");
 }
+
 
 int main()
 {  
     int choice;
     //list of formulas
-    cout << "1) Discriminant" << "    " << "2) Hypotenuse" << "    " << "3) Area of circle" << endl;
-    cout << "4) Quadratic" << "       " << "5) 2D Distance" << "   " << "6) 3D Distance" << endl;
-    cout << "7) Midpoint" << "        " << "8) Sine" << "          " << "9) Cosine" << endl;
-    cout << "10) Tangent" << "        " << "11) Slope" << "        " << "12) Circumference Of Circle" << endl;
+    std::cout << "1) Discriminant" << "    " << "2) Hypotenuse" << "    " << "3) Area of circle" << std::endl;
+    std::cout << "4) Quadratic" << "       " << "5) 2D Distance" << "   " << "6) 3D Distance" << std::endl;
+    std::cout << "7) Midpoint" << "        " << "8) Sine" << "          " << "9) Cosine" << std::endl;
+    std::cout << "10) Tangent" << "        " << "11) Slope" << "        " << "12) Circumference Of Circle" << std::endl;
 
-    cout << endl << "Choose one: ";
-    cin >> choice;
+    std::cout << std::endl << "Choose one: ";
+    std::cin >> choice;
     switch (choice) {
         case 1:
             discriminant();
@@ -204,5 +215,8 @@ int main()
         case 12:
             CircumferenceOfCircle();
             break;
+        default:
+            std::cout << "No formula found at that number...Try again: " << std::endl;
+            return main();
     }
 }
